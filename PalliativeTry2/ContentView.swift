@@ -17,29 +17,29 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            MenuButton(title: "Ambulation", options: ["Full Ambulation", "Slightly reduced ambulation", "Reduced ambulation", "Very reduced ambulation", "Bedbound"], score: $ambulationScore)
+            MenuButton(title: "Ambulation", options: ["Full Ambulation", "Slightly reduced ambulation", "Reduced ambulation", "Very reduced ambulation", "Bedbound"], score: $ambulationScore, symbol: "figure.walk")
                 .frame(width: 150)
             
-            MenuButton(title: "Activity", options: ["Normal Activity", "Reduced Activity", "Minimal Activity", "Very Minimal Activity", "Bedridden"], score: $activityScore)
+            MenuButton(title: "Activity", options: ["Normal Activity", "Reduced Activity", "Minimal Activity", "Very Minimal Activity", "Bedridden"], score: $activityScore, symbol: "bolt")
                 .frame(width: 150)
             
-            MenuButton(title: "Assistance", options: ["No Assistance", "Slight Assistance", "Moderate Assistance", "Significant Assistance", "Total Assistance"], score: $assistanceScore)
+            MenuButton(title: "Assistance", options: ["No Assistance", "Slight Assistance", "Moderate Assistance", "Significant Assistance", "Total Assistance"], score: $assistanceScore, symbol: "hand.raised")
                 .frame(width: 150)
             
-            MenuButton(title: "Oral Intake", options: ["Normal Intake", "Reduced Intake", "Minimal Intake", "Sips only", "Nothing by mouth"], score: $oralIntakeScore)
+            MenuButton(title: "Oral Intake", options: ["Normal Intake", "Reduced Intake", "Minimal Intake", "Sips only", "Nothing by mouth"], score: $oralIntakeScore, symbol: "fork.knife")
                 .frame(width: 150)
             
-            MenuButton(title: "Mental Status", options: ["Alert", "Forgetful", "Confused", "Drowsy", "Unresponsive"], score: $mentalStatusScore)
+            MenuButton(title: "Mental Status", options: ["Alert", "Forgetful", "Confused", "Drowsy", "Unresponsive"], score: $mentalStatusScore, symbol: "brain.head.profile")
                 .frame(width: 150)
             
             Button(action: calculatePPS) {
-                Text("Calculate PPSS")
-                    .font(.title)
-                    .padding()
+                Text("Calculate PPS")
+                    .padding(EdgeInsets(top: 12, leading: 20, bottom: 12, trailing: 20))
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .background(Color.green)
-                    .foregroundColor(.white)
-                    .cornerRadius(5)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
             }
+            .buttonStyle(PlainButtonStyle())
             
             Text("PPS Score: \(ppsScore)")
                 .font(.title)
@@ -61,6 +61,7 @@ struct MenuButton: View {
     let title: String
     let options: [String]
     @Binding var score: Int
+    let symbol: String
 
     var body: some View {
         Menu {
@@ -70,7 +71,7 @@ struct MenuButton: View {
                 }
             }
         } label: {
-            Label(title, systemImage: "list.bullet")
+            Label(title, systemImage: symbol)
                 .font(.title)
                 .padding()
                 .background(Color.blue)
