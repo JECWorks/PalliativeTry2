@@ -11,6 +11,9 @@
 		A95222CE2C1E866F0001AA71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95222CD2C1E866F0001AA71 /* ContentView.swift */; };
 		A95222D02C1E86700001AA71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95222CF2C1E86700001AA71 /* Assets.xcassets */; };
 		A95222D32C1E86700001AA71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95222D22C1E86700001AA71 /* Preview Assets.xcassets */; };
+		F10000012C1E90000001AA71 /* PPSCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000002C1E90000001AA71 /* PPSCalculator.swift */; };
+		F10000022C1E90000001AA71 /* PPSCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000002C1E90000001AA71 /* PPSCalculator.swift */; };
+		F10000032C1E90000001AA71 /* PPSCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000052C1E90000001AA71 /* PPSCalculatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +23,20 @@
 		A95222CF2C1E86700001AA71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A95222D22C1E86700001AA71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A95222D42C1E86700001AA71 /* PalliativeTry2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PalliativeTry2.entitlements; sourceTree = "<group>"; };
+		F10000002C1E90000001AA71 /* PPSCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPSCalculator.swift; sourceTree = "<group>"; };
+		F10000042C1E90000001AA71 /* PalliativeTry2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PalliativeTry2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10000052C1E90000001AA71 /* PPSCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPSCalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A95222C52C1E866F0001AA71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F10000072C1E90000001AA71 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				A95222CA2C1E866F0001AA71 /* PalliativeTry2 */,
+				F10000062C1E90000001AA71 /* PalliativeTry2Tests */,
 				A95222C92C1E866F0001AA71 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				A95222C82C1E866F0001AA71 /* PalliativeTry2.app */,
+				F10000042C1E90000001AA71 /* PalliativeTry2Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +69,7 @@
 			children = (
 				A95222CB2C1E866F0001AA71 /* PalliativeTry2App.swift */,
 				A95222CD2C1E866F0001AA71 /* ContentView.swift */,
+				F10000002C1E90000001AA71 /* PPSCalculator.swift */,
 				A95222CF2C1E86700001AA71 /* Assets.xcassets */,
 				A95222D42C1E86700001AA71 /* PalliativeTry2.entitlements */,
 				A95222D12C1E86700001AA71 /* Preview Content */,
@@ -67,6 +83,14 @@
 				A95222D22C1E86700001AA71 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F10000062C1E90000001AA71 /* PalliativeTry2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F10000052C1E90000001AA71 /* PPSCalculatorTests.swift */,
+			);
+			path = PalliativeTry2Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +112,22 @@
 			productName = PalliativeTry2;
 			productReference = A95222C82C1E866F0001AA71 /* PalliativeTry2.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F100000A2C1E90000001AA71 /* PalliativeTry2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F100000D2C1E90000001AA71 /* Build configuration list for PBXNativeTarget "PalliativeTry2Tests" */;
+			buildPhases = (
+				F10000082C1E90000001AA71 /* Sources */,
+				F10000072C1E90000001AA71 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PalliativeTry2Tests;
+			productName = PalliativeTry2Tests;
+			productReference = F10000042C1E90000001AA71 /* PalliativeTry2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -118,6 +158,7 @@
 			projectRoot = "";
 			targets = (
 				A95222C72C1E866F0001AA71 /* PalliativeTry2 */,
+				F100000A2C1E90000001AA71 /* PalliativeTry2Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -139,8 +180,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F10000012C1E90000001AA71 /* PPSCalculator.swift in Sources */,
 				A95222CE2C1E866F0001AA71 /* ContentView.swift in Sources */,
 				A95222CC2C1E866F0001AA71 /* PalliativeTry2App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F10000082C1E90000001AA71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F10000022C1E90000001AA71 /* PPSCalculator.swift in Sources */,
+				F10000032C1E90000001AA71 /* PPSCalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +370,38 @@
 			};
 			name = Release;
 		};
+		F100000B2C1E90000001AA71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WHKA3Q9GPE;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				PRODUCT_BUNDLE_IDENTIFIER = JECWorks.PalliativeTry2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "";
+				TEST_TARGET_NAME = PalliativeTry2;
+			};
+			name = Debug;
+		};
+		F100000C2C1E90000001AA71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WHKA3Q9GPE;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				PRODUCT_BUNDLE_IDENTIFIER = JECWorks.PalliativeTry2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "";
+				TEST_TARGET_NAME = PalliativeTry2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -336,6 +419,15 @@
 			buildConfigurations = (
 				A95222D82C1E86700001AA71 /* Debug */,
 				A95222D92C1E86700001AA71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F100000D2C1E90000001AA71 /* Build configuration list for PBXNativeTarget "PalliativeTry2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F100000B2C1E90000001AA71 /* Debug */,
+				F100000C2C1E90000001AA71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
